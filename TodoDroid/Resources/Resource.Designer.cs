@@ -60,11 +60,23 @@ namespace TodoDroid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f050005
+			public const int CancelarButton = 2131034117;
+			
+			// aapt resource value: 0x7f050007
+			public const int FechaButton = 2131034119;
+			
 			// aapt resource value: 0x7f050003
-			public const int GuardarButton = 2131034115;
+			public const int FechaFin = 2131034115;
+			
+			// aapt resource value: 0x7f050004
+			public const int GuardarButton = 2131034116;
 			
 			// aapt resource value: 0x7f050002
 			public const int PrioridadEntry = 2131034114;
+			
+			// aapt resource value: 0x7f050006
+			public const int RevisarButton = 2131034118;
 			
 			// aapt resource value: 0x7f050001
 			public const int TodoEntry = 2131034113;
@@ -106,6 +118,9 @@ namespace TodoDroid
 			
 			// aapt resource value: 0x7f040000
 			public const int Hello = 2130968576;
+			
+			// aapt resource value: 0x7f040002
+			public const int PrioridadPlaceholder = 2130968578;
 			
 			static String()
 			{

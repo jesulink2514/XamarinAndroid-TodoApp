@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/PrioridadEntry"
-        android:hint="Prioridad" />
+        android:hint="@string/PrioridadPlaceholder" />
     <LinearLayout
         android:orientation="horizontal"
         android:minWidth="25px"
@@ -33,10 +33,48 @@
             android:textColor="#ff1FA645"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_marginLeft="10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:id="@+id/FechaFin" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:text="Guardar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#ff187b40"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/GuardarButton" />
+        <Button
+            android:text="Cancelar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#ffe73434"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/CancelarButton" />
+        <Button
+            android:text="Revisar"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:background="#ff1817e5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/RevisarButton" />
     </LinearLayout>
     <Button
-        android:text="Guardar"
+        android:text="Cambiar la fecha"
+        android:id="@+id/FechaButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/GuardarButton" />
+        android:layout_height="wrap_content" />
 </LinearLayout>
