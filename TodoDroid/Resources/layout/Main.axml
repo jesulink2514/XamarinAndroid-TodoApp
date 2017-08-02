@@ -10,4 +10,33 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView1"
         android:textColor="@android:color/holo_blue_dark" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/TodoEntry"
+        android:hint="Nueva tarea" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/PrioridadEntry"
+        android:hint="Prioridad" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Fecha Fin:"
+            android:layout_width="wrap_content"
+            android:layout_height="22dp"
+            android:textColor="#ff1FA645"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
+    <Button
+        android:text="Guardar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/GuardarButton" />
 </LinearLayout>
