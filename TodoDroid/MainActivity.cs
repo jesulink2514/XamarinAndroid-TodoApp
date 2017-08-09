@@ -4,6 +4,8 @@ using Android.App;
 using Android.Content;
 using Android.Widget;
 using Android.OS;
+using System.IO;
+using TodoApp;
 
 namespace TodoDroid
 {
@@ -23,6 +25,7 @@ namespace TodoDroid
 
             // Set our view from the "main" layout resource
             SetContentView (Resource.Layout.Main);
+            SetConnection();
 
             FechaDisplay = FindViewById<TextView>(Resource.Id.FechaFin);
             FechaButton = FindViewById<Button>(Resource.Id.FechaButton);
@@ -40,6 +43,8 @@ namespace TodoDroid
                 tareas.Add($"{todo.Text} Prioridad: {prioridad.Text} - {fecha}");
                 todo.Text = string.Empty;
                 prioridad.Text = string.Empty;
+
+
             };
 
             cancelButton.Click += (s, e) =>
@@ -84,6 +89,16 @@ namespace TodoDroid
                     break;
             }
             return null;
+        }
+        private SQLite.SQLiteConnection database;
+
+        private void SetConnection()
+        {
+            var folder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+            var dbPath = Path.Combine(folder, "todo.db3");
+            var conn = new SQLite.SQLiteConnection(dbPath);
+            conn.CreateTable<TodoItem>();
+            database = conn;
         }
     }
 }
