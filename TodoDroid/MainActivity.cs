@@ -17,8 +17,6 @@ namespace TodoDroid
         private DateTime fecha;
         private const int DatePickerId = 0;
 
-        private List<string> tareas = new List<string>();
-
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
@@ -40,11 +38,17 @@ namespace TodoDroid
 
             saveButton.Click += (s, e) =>
             {
-                tareas.Add($"{todo.Text} Prioridad: {prioridad.Text} - {fecha}");
+                var todoItem = new TodoItem()
+                {
+                    ToDo = todo.Text,
+                    Prioridad = prioridad.Text,
+                    FechaFin = fecha
+                };
+
                 todo.Text = string.Empty;
                 prioridad.Text = string.Empty;
 
-
+                database.Insert(todoItem);
             };
 
             cancelButton.Click += (s, e) =>
@@ -56,7 +60,6 @@ namespace TodoDroid
             reviewButton.Click += (s, e) =>
             {
                 var intent = new Intent(this, typeof(ReviewActivity));
-                intent.PutStringArrayListExtra("tareas", tareas);
                 StartActivity(intent);
             };
 
